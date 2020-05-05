@@ -14,3 +14,8 @@ class TicTacToe
 def initialize
   @board = Array.new("")
 end
+
+def display_board
+  pu
+
+end
