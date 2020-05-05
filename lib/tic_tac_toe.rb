@@ -17,5 +17,5 @@ end
 
 def display_board
   pu
-
+end
 end
