@@ -96,7 +96,7 @@ class TicTacToe
   end
   
   def winner
-    index = [}
+    index = []
     index = won?
     if == false
       return nil
