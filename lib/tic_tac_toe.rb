@@ -46,4 +46,38 @@ class TicTacToe
     end
     return turn
   end
+  
+  def turn
+    puts "Please choose a number 1-9:"
+    user_input = get.chomp
+    index = input_to_index(user_input)
+    if valid_move?(index)
+      player_token = current_player
+      move(index, player_token)
+      display_board
+    else
+      turn
+    end
+  end
+  
+  def won?
+    WIN_COMBINATIONS.each {|win_combo|
+      index_0 = win_combo[0]
+      index_1 = win_combo[1]
+      index_2 = win_combo[2]
+      
+      position_1 = @board[index_0]
+      position_2 = @board[index_1]
+      position_3 = @board[index_2]
+      
+      if position_1 == "X" && position_2 == "X" && position_3 = "X"
+        return win_combo
+      elsif position_1 =="0" && position_2 == "0" && position_3 == "0"
+        return win_combo
+      end
+    }
+    return false
+  end
+  
+  
 end
