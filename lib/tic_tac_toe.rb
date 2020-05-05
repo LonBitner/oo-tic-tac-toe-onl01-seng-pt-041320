@@ -16,6 +16,6 @@ def initialize
 end
 
 def display_board
-  pu
+  puts "#{@board[0]} | #{@board[1]}"
 end
 end
