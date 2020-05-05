@@ -79,5 +79,38 @@ class TicTacToe
     return false
   end
   
+  def full?
+    @board.all? {|index| index == "X" || index == "0"}
+  end 
+  
+  def draw?
+    if !won? && full?
+      return true
+    end
+  end
+  
+  def over?
+    if won? || draw?
+      return true
+    end
+  end
+  
+  def winner
+    index = [}
+    index = won?
+    if == false
+      return nil
+    else 
+      if @board[index[0]] == "X"
+        return "X"
+      else
+        return "0"
+      end
+    end
+  end
+  
+  def play 
+    until over? == trueturn
+  end
   
 end
